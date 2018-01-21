@@ -1,0 +1,31 @@
+1) 启动 Package Control 模块
+
+在 Sublime Text 3 里, 按 Ctrl+` (或按左下角进入 Switch Panel), 打开 Console, 输入
+
+import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
+
+重启 Sublime Text 3
+
+2) 中文支持
+
+2.1) 中文显示
+
+2.1.1) 在 Sublime Text 3 里, 按 Ctrl+Shift+P 打开命令行模式, 
+输入 Install Package 关键字, 选 Package Control: Install Package
+
+此时你会看到左下角有个 = 号来回动, 稍等一会，会再次在命令行下弹出一个下拉菜单
+输入 "ConvertToUTF8" 或 "GBK Support", 选之安装
+
+再重启 Sublime Text 3
+
+2.1.2) 打开具有中文的文件, 如果显示要安装 Codecs33, 
+去以下下载, 解压, 改名为 Codecs33, 放到 Preferences - Browse Packages
+
+https://github.com/seanliang/Codecs33/tree/linux-x64
+
+2.2) 中文输入
+
+$ git clone https://github.com/lyfeyaj/sublime-text-imfix.git
+$ cd sublime-text-imfix
+$ ./sublime-imfix
+

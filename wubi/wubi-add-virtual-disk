@@ -1,0 +1,58 @@
+#!/bin/sh -e
+
+# Moves the specified directory to a new virtual disk.
+
+# Copyright (C) 2008 Agostino Russo <agostino.russo@gmail.com>
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2, or (at your option) any
+# later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
+
+usage="\nWrong arguments. The function should be invokes as follow:\n\n\t$0 target_directory size_mb\n\nFor instance, in order to move /home to a dedicated virtual disk of 15000MB use:\n\n\t$0 /home 15000\n"
+
+if [ -z "$1" ] || [ -z "$2" ] || [ ! -d "$1" ] || [ ! "$2" -eq "$2" ]; then 
+    echo $usage
+    exit 1
+fi
+if [ "$(whoami)" != root ]; then
+    echo "Admin rights are required to run this program."
+    exit 1
+fi 
+
+target="$1" #home or usr
+virtual_disk="$(echo ${target#/}|sed 's:/:_:')".disk
+size_mb="$2" #new virtual disk size in MB
+free_space=$(df -B 1M /host|tail -n 1|awk '{print $4}')
+if [ $size_mb -lt 2000 ]; then
+    echo "The size $size_mb is too small, 2000MB minimum are required."
+    exit 1
+fi
+if [ -e "/host/ubuntu/disks/$virtual_disk" ]; then
+    echo "The target virtual disk /host/ubuntu/disks/$virtual_disk already exists, aborting."
+    exit 1
+fi 
+if [ $free_space -lt $size_mb ]; then
+    echo "Not enough free space ($free_space MB < $size_mb MB), aborting."
+    exit 1
+fi
+
+cd /host/ubuntu/disks
+dd if=/dev/zero of="$virtual_disk" bs=1MB count=1 seek="$size_mb"
+mkfs.ext4 -F "$virtual_disk"
+mv ${target} ${target}.backup
+mkdir ${target}
+echo "/host/ubuntu/disks/$virtual_disk    ${target}    ext4    loop    0    0" >> /etc/fstab
+mount ${target}
+rsync -av --exclude=${target}.backup/.gvfs ${target}.backup/* ${target}
+echo "\nOperation completed successfully, if all is good feel free to remove ${target}.backup\n\nRebooting is recommended."
+

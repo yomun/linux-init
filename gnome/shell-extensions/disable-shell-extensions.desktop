@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=GNOME Shell Extensions
+Comment=Enable / Disable GNOME Shell Extensions
+Icon=utilities-terminal
+Exec=bash /home/yomun/Documents/gits/linux-init/gnome/shell-extensions/disable-shell-extensions.sh
+Terminal=false
+Categories=System;
+Name[en_US]=Shell Extensions

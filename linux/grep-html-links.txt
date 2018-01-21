@@ -1,0 +1,1 @@
+curl http://www.vpngate.net/en/ | grep -Eo "(do_openvpn.aspx)[a-zA-Z0-9./?&=_-]*"
