@@ -54,7 +54,7 @@ sudo apt install gir1.2-gtop-2.0 gir1.2-networkmanager-1.0 -y
 sudo apt install openvpn network-manager-openvpn network-manager-openvpn-gnome curl bc -y
 
 # Clamav
-sudo apt install clamav clamtk clamav-daemon libclamunrar7 -y
+# sudo apt install clamav clamtk clamav-daemon libclamunrar7 -y
 
 # GNOME - Chinese
 sudo apt install language-pack-zh-hans language-pack-zh-hans-base -y
@@ -96,10 +96,10 @@ fi
 # http://jasonmun.blogspot.my/2016/08/vmware-hgfs.html
 # -------------------------------------------------------------------------------------------
 # https://softwareupdate.vmware.com/cds/vmw-desktop/ws/
-wget -O VMware-Workstation-Full-14.1.0-7370693.x86_64.bundle https://www.vmware.com/go/getworkstation-linux
+# wget -O VMware-Workstation-Full-14.1.0-7370693.x86_64.bundle https://www.vmware.com/go/getworkstation-linux
 # tar -xvf VMware-Workstation-*.x86_64.bundle.tar
-chmod +x VMware-Workstation-*.x86_64.bundle
-sudo ./VMware-Workstation-*.x86_64.bundle
+# chmod +x VMware-Workstation-*.x86_64.bundle
+# sudo ./VMware-Workstation-*.x86_64.bundle
 
 # -------------------------------------------------------------------------------------------
 # Eclipse
