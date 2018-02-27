@@ -138,10 +138,10 @@ fi
 # sudo ./install.sh
 
 # -------------------------------------------------------------------------------------------
-# Teamviewer 12 (i386)
+# Teamviewer 13 (64)
 # https://www.teamviewer.com/en/download/linux/
 # -------------------------------------------------------------------------------------------
-# LINK=`curl https://www.teamviewer.com/en/download/linux/ | grep "<a href=" | grep .deb | head -n1 | sed 's/^.*<a href="//g' | sed 's/.deb.*/.deb/g'`
+# LINK=`curl https://www.teamviewer.com/en/download/linux/ | grep teamviewer_amd64.deb | head -n1 | sed 's/^.*<a class="linkBlue" href="//g' | sed 's/.deb.*/.deb/g'`
 # FILE_NAME=`echo ${LINK} | sed 's/^.*\/teamviewer_/teamviewer_/g'`
 # wget ${LINK}
 # sudo dpkg -i ${FILE_NAME}
