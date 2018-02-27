@@ -91,9 +91,12 @@ cd ..
 # URL=`curl https://nodejs.org/en/download/ | grep -Eo "(href=\")[a-zA-Z0-9.:/?&=_-]*" | grep linux-x64.tar.xz | sed "s/href=\"//g"`
 # wget ${URL}
 # sudo tar --strip-components=1 -Jxvf node-v*-linux-x64.tar.xz -C /usr/local
+# node -v
 
+## npm 安装
 # sudo apt install npm -y
-#
+# npm -v
+
 # git clone https://github.com/geeeeeeeeek/electronic-wechat.git
 # cd electronic-wechat
 # npm install && npm start
