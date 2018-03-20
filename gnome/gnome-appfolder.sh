@@ -12,42 +12,43 @@
 # Set AppFolder on GNOME Applications Menu / 配置 GNOME 程序菜单文件夹
 # ---------------------------------------------------------------------------------
 
-FOLDER_CHILDREN="['Utilities', 'Sundry', 'System', 'Games', 'Internet', 'Java', 'LibreOffice', 'Multimedia', 'Programming', 'VM']"
+REMOVE_NOT_EXISTS_DESKTOP="0"
+
+FOLDER_CHILDREN="['Utilities', 'Sundry', 'System', 'Games', 'Internet', 'Java', 'LibreOffice', 'Multimedia', 'Programming']"
 
 array_folders_name=(
 	"Utilities" "Sundry" "System" "Games" "Internet" 
-	"Java" "LibreOffice" "Multimedia" "Programming" "VM"
+	"Java" "LibreOffice" "Multimedia" "Programming"
 )
 array_translate=(
 	"true" "true" "false" "false" "false" 
-	"false" "false" "false" "false" "false"
+	"false" "false" "false" "false"
 )
 array_categories=(
 	"['X-GNOME-Utilities']" "['X-GNOME-Sundry']" "@as []" "@as []" "@as []" 
-	"@as []" "@as []" "@as []" "@as []" "@as []"
+	"@as []" "@as []" "@as []" "@as []"
 )
 # *.desktop
 array_apps=( 
  "['org.gnome.FileRoller', 'org.gnome.DejaDup', 'gucharmap', 'org.gnome.baobab', 'org.gnome.DiskUtility', 
  'org.gnome.font-viewer', 'eog', 'org.gnome.Logs', 'seahorse', 'org.gnome.Screenshot', 
  'gnome-system-monitor', 'gnome-terminal', 'gnome-tweak-tool']"
- "['stacer', 'ubuntu-cleaner', 'ucaresystemcore', 'ukuu']"
+ "['stacer', 'ubuntu-cleaner', 'ucaresystemcore']"
  "['ca.desrt.dconf-editor', 'fcitx', 'fcitx-configtool', 'gufw', 'gdebi', 
  'im-config', 'gnome-language-selector', 'menulibre', 'nvidia-settings', 'org.gnome.PowerStats', 
  'gtkorphan', 'gnome-control-center', 'software-properties-gnome', 'update-manager', 'gnome-session-properties', 
  'usb-creator-gtk', 'org.gnome.Software']" 
  "['gnome-mahjongg', 'gnome-sudoku', 'gnome-mines']"
  "['bcloud', 'firefox', 'google-chrome', 'qBittorrent', 'remmina', 
- 'skypeforlinux', 'thunderbird', 'uget-gtk', 'wireshark', 'youtube-dlg']"
+ 'skypeforlinux', 'uget-gtk', 'wireshark', 'youtube-dlg']"
  "['JB-jconsole-jdk8', 'JB-javaws-jdk8', 'JB-jvisualvm-jdk8', 'JB-controlpanel-jdk8', 'JB-policytool-jdk8', 'JB-mission-control-jdk8']"
  "['libreoffice-draw', 'libreoffice-startcenter', 'libreoffice-impress', 'libreoffice-calc', 'libreoffice-writer', 'libreoffice-math']"
- "['cheese', 'mpv', 'netease-cloud-music', 'rhythmbox', 'shotwell', 'simple-scan', 'totem', 'vlc']"
- "['opt_eclipse', 'meld', 'notepadqq', 'sublime-text']"
- "['vmware-workstation', 'vmware-netcfg', 'virtualbox', 'vmware-player', 'test']"
+ "['cheese', 'gimp', 'mpv', 'netease-cloud-music', 'rhythmbox', 'shotwell', 'simple-scan', 'totem', 'vlc']"
+ "['netbeans-8.2', 'opt_eclipse', 'meld', 'sublime-text']"
 )
 array_folder_name=(
 	"X-GNOME-Utilities.directory" "X-GNOME-Sundry.directory" "System" "Games" "Internet" 
-	"Java" "LibreOffice" "Multimedia" "Programming" "VM"
+	"Java" "LibreOffice" "Multimedia" "Programming"
 )
 
 DESKTOP_FILE_TYPE=".desktop"
@@ -56,7 +57,7 @@ APPS=""
 
 function check_desktop_file()
 {
-	local NOT_EXISTS="0"
+	local LOCAL_NOT_EXISTS="0"
 
 	local LOCAL_APPS=`echo "${APPS}" | sed "s/ //g" | sed "s/',/${DESKTOP_FILE_TYPE}',/g" | sed "s/']/${DESKTOP_FILE_TYPE}']/g"`
 
@@ -66,18 +67,24 @@ function check_desktop_file()
 	do
 		ix=`echo ${ix:1} | sed "s/${DESKTOP_FILE_TYPE}'/${DESKTOP_FILE_TYPE}/g"`
 
-		if [ `echo "${ACT_SYS_APP_LIST}" | grep -c ${ix}` -eq 0 ]
+		if [ "${REMOVE_NOT_EXISTS_DESKTOP}" == "1" ]
 		then
-			# remove *.desktop if not exists in system
-			LOCAL_APPS=`echo "${LOCAL_APPS}" | sed "s/${ix}//g"`
-			echo "[Not Exists] >> ${ix}"
-			NOT_EXISTS="1"
+			if [ `echo "${ACT_SYS_APP_LIST}" | grep -c ${ix}` -eq 0 ]
+			then
+				# remove *.desktop if not exists in system
+				LOCAL_APPS=`echo "${LOCAL_APPS}" | sed "s/${ix}//g"`
+				echo "[Not Exists] >> ${ix}"
+				LOCAL_NOT_EXISTS="1"
+			fi
 		fi
 	done
 
-	if [ "${NOT_EXISTS}" == "1" ]
+	if [ "${REMOVE_NOT_EXISTS_DESKTOP}" == "1" ]
 	then
-		echo ${LOCAL_APPS} | sed "s/','/', '/g" | sed "s/${DESKTOP_FILE_TYPE}'/'/g"
+		if [ "${LOCAL_NOT_EXISTS}" == "1" ]
+		then
+			echo ${LOCAL_APPS} | sed "s/','/', '/g" | sed "s/${DESKTOP_FILE_TYPE}'/'/g"
+		fi
 	fi
 
 	APPS="${LOCAL_APPS}"
