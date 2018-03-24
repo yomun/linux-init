@@ -35,3 +35,6 @@ sudo apt remove yelp -y
 # sudo apt remove ibus -y
 # sudo apt remove libreoffice-core libreoffice-common -y
 # sudo apt remove totem -y
+
+# remove Amazon links
+sudo apt purge ubuntu-web-launchers -y
