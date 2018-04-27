@@ -23,13 +23,13 @@ sudo add-apt-repository ppa:teejee2008/ppa -y                       # aptik, dis
 # sudo add-apt-repository ppa:ubuntuhandbook1/apps -y               # converseen
 # sudo add-apt-repository ppa:dhor/myway -y                         # easyimagesizer
 # sudo add-apt-repository ppa:ravefinity-project/ppa -y             # vivacious-colors
-sudo add-apt-repository ppa:wireshark-dev/stable -y                 # wireshark
+# sudo add-apt-repository ppa:wireshark-dev/stable -y               # wireshark
 sudo add-apt-repository ppa:xuzhen666/gnome-mpv -y                  # gnome-mpv
 # sudo add-apt-repository ppa:slytomcat/ppa -y                      # yd-tools
 # sudo add-apt-repository ppa:nilarimogard/webupd8 -y               # youtube-dlg / gnome-twitch
 
-wget -q -O - http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc | sudo apt-key add -
-sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian artful contrib" >> /etc/apt/sources.list.d/virtualbox.org.list' 
+# wget -q -O - http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc | sudo apt-key add -
+# sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian artful contrib" >> /etc/apt/sources.list.d/virtualbox.org.list' 
 
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 sudo apt-add-repository "deb https://download.sublimetext.com/ apt/stable/"
@@ -73,7 +73,7 @@ sudo apt install indicator-diskman -y               # 14.04 / 15.04 - 17.10
 # sudo apt install vivacious-colors -y
 # sudo apt install vivacious-folder-colors-addon -y
 
-sudo apt install wireshark -y                                            # 12.04 / 14.04 - 17.04
+sudo apt install wireshark -y                                            # 12.04 / 14.04 - 18.04
 
 sudo apt install gnome-mpv -y; sudo apt remove totem totem-common -y     # 14.10 - 17.10
 
@@ -84,4 +84,5 @@ sudo apt install gnome-mpv -y; sudo apt remove totem totem-common -y     # 14.10
 # http://download.virtualbox.org/virtualbox/5.2.4/Oracle_VM_VirtualBox_Extension_Pack-5.2.4-119785.vbox-extpack
 # FILE=`curl https://www.virtualbox.org/wiki/Downloads | grep .vbox-extpack | grep -Eo "(href=\")[a-zA-Z0-9.:/?&=_-]*" | sed "s/href=\"//g" | head -n1`
 # wget ${FILE}
-sudo apt install virtualbox-5.2 -y
+# sudo apt install virtualbox-5.2 -y
+sudo apt install virtualbox -y
