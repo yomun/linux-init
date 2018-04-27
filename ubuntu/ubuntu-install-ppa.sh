@@ -14,7 +14,6 @@ sudo add-apt-repository ppa:gerardpuig/ppa -y                       # ubuntu-cle
 sudo add-apt-repository ppa:graphics-drivers/ppa -y                 # nvidia-384
 sudo add-apt-repository ppa:webupd8team/java -y                     # java
 sudo add-apt-repository ppa:plushuang-tw/uget-stable -y             # uget
-sudo add-apt-repository ppa:webupd8team/sublime-text-3 -y           # sublime
 sudo add-apt-repository ppa:teejee2008/ppa -y                       # aptik, diskman, ukuu
 # sudo add-apt-repository ppa:apandada1/brightness-controller -y    # brightness-controller
 # sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y  # grub-customizer
@@ -31,6 +30,10 @@ sudo add-apt-repository ppa:xuzhen666/gnome-mpv -y                  # gnome-mpv
 
 wget -q -O - http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc | sudo apt-key add -
 sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian artful contrib" >> /etc/apt/sources.list.d/virtualbox.org.list' 
+
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo apt-add-repository "deb https://download.sublimetext.com/ apt/stable/"
+sudo apt install sublime-text
 
 # Precise/12.04
 # Trusty/14.04
@@ -54,7 +57,7 @@ sudo apt install ubuntu-cleaner -y                  # 14.04 / 16.04 - 18.04
 # sudo apt install nvidia-387 -y
 sudo apt install oracle-java8-installer -y
 sudo apt install uget aria2 -y                      # 12.04 - 18.04
-sudo apt install sublime-text-installer -y          # 12.04 - 17.10
+
 # sudo apt install aptik -y                         # 12.04 / 14.04 - 17.10
 # sudo apt install brightness-controller -y         # 12.04 / 14.04 / 15.04 - 17.10
 # sudo apt install grub-customizer -y               # 12.04 - 14.10 / 16.04 / 17.10
