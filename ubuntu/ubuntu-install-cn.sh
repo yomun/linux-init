@@ -57,7 +57,8 @@ sudo dpkg -i youdao-dict_1.1.1-0*ubuntu_amd64.deb
 # sudo apt-get --fix-broken install
 sudo apt install python3-dev -y
 sudo apt install python3-setuptools -y
-sudo easy_install3 pip -y
+# sudo easy_install3 pip -y
+sudo apt install python3-pip -y
 
 sudo pip3 install --upgrade pycrypto
 sudo pip3 install --upgrade keyring
