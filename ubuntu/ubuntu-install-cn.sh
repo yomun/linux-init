@@ -32,6 +32,7 @@ if [ -f "netease-cloud-music_1.1.0_amd64_ubuntu.deb" ]
 then
 	sudo dpkg -i netease-cloud-music_1.1.0_amd64_ubuntu.deb
 	sudo apt install vlc -y
+	# sudo apt-get --fix-broken install
 	sudo apt install -f -y
 	sudo sed -i "s/Exec=netease-cloud-music/Exec=sudo netease-cloud-music/" /usr/share/applications/netease-cloud-music.desktop
 fi
@@ -42,7 +43,7 @@ fi
 # -------------------------------------------------------------------------------------------
 sudo apt install python3 python3-dbus python3-lxml python3-pil python3-requests python3-xdg python3-xlib -y
 sudo apt install python3-pyqt5 python3-pyqt5.qtmultimedia python3-pyqt5.qtquick python3-pyqt5.qtwebkit -y
-sudo apt install qml-module-qtgraphicaleffects qml-module-qtquick-controls -y
+# sudo apt install qml-module-qtgraphicaleffects qml-module-qtquick-controls -y
 sudo apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-chi-sim tesseract-ocr-chi-tra -y
 sudo apt install gir1.2-appindicator3-0.1 libqt5multimedia5-plugins ttf-wqy-microhei -y
 

@@ -14,7 +14,7 @@
 # [Tuxcut]    http://jasonmun.blogspot.my/2017/04/ubuntu-tuxcut-linux.html
 # ---------------------------------------------------------------------------------
 sudo apt install ubuntu-restricted-extras -y
-sudo apt install build-essential python-software-properties -y
+sudo apt install build-essential python3-software-properties -y
 
 sudo apt install p7zip p7zip-full p7zip-rar rar
 

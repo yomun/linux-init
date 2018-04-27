@@ -41,24 +41,25 @@ sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian artful co
 # Yakkety/16.10
 # Zesty/17.04
 # Artful/17.10
+# Bionic/18.04
 
-# ucaresystem-core (12.04 / 14.04 / 15.04 - 17.10)
+# ucaresystem-core (12.04 / 14.04 / 15.04 - 18.04)
 sudo add-apt-repository ppa:utappia/stable -y
 # sudo sed -i 's/artful/yakkety/g' /etc/apt/sources.list.d/utappia-ubuntu-stable-artful.list
 # sudo sed -i 's/zesty/yakkety/g' /etc/apt/sources.list.d/utappia-ubuntu-stable-zesty.list
 sudo apt update
 sudo apt install ucaresystem-core -y
 
-sudo apt install ubuntu-cleaner -y                  # 14.04 / 16.04 - 17.10
+sudo apt install ubuntu-cleaner -y                  # 14.04 / 16.04 - 18.04
 # sudo apt install nvidia-387 -y
 sudo apt install oracle-java8-installer -y
-sudo apt install uget aria2 -y                      # 12.04 - 17.10
+sudo apt install uget aria2 -y                      # 12.04 - 18.04
 sudo apt install sublime-text-installer -y          # 12.04 - 17.10
 # sudo apt install aptik -y                         # 12.04 / 14.04 - 17.10
 # sudo apt install brightness-controller -y         # 12.04 / 14.04 / 15.04 - 17.10
 # sudo apt install grub-customizer -y               # 12.04 - 14.10 / 16.04 / 17.10
 # sudo apt install xdman-downloader -y              # 12.04 / 14.04 / 16.04 - 17.04
-sudo apt install notepadqq notepadqq-gtk -y         # 14.04 - 17.10
+# sudo apt install notepadqq notepadqq-gtk -y       # 14.04 - 17.10
 # sudo apt install ppsspp -y                        # 14.04 / 15.04 - 17.10
 sudo apt install indicator-diskman -y               # 14.04 / 15.04 - 17.10
 # sudo apt install ukuu -y                          # 14.04 / 15.04 - 17.10
