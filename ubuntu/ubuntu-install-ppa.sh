@@ -64,7 +64,7 @@ sudo apt install uget aria2 -y                      # 12.04 - 18.04
 # sudo apt install xdman-downloader -y              # 12.04 / 14.04 / 16.04 - 17.04
 # sudo apt install notepadqq notepadqq-gtk -y       # 14.04 - 17.10
 # sudo apt install ppsspp -y                        # 14.04 / 15.04 - 17.10
-sudo apt install indicator-diskman -y               # 14.04 / 15.04 - 17.10
+# sudo apt install indicator-diskman -y             # 14.04 / 15.04 - 17.10
 # sudo apt install ukuu -y                          # 14.04 / 15.04 - 17.10
 
 # sudo apt install converseen -y                    # 12.04 / 14.04 / 16.04 - 16.10
@@ -75,7 +75,7 @@ sudo apt install indicator-diskman -y               # 14.04 / 15.04 - 17.10
 
 sudo apt install wireshark -y                                            # 12.04 / 14.04 - 18.04
 
-sudo apt install gnome-mpv -y; sudo apt remove totem totem-common -y     # 14.10 - 17.10
+# sudo apt install gnome-mpv -y; sudo apt remove totem totem-common -y   # 14.10 - 17.10
 
 # sudo apt install youtube-dlg -y                                        # 12.04 / 14.04 / 15.04 - 17.04
 # sudo apt install yd-tools -y

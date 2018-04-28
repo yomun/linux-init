@@ -13,6 +13,8 @@
 # [Selek TOR] http://jasonmun.blogspot.my/2017/03/linux-selektor.html
 # [Tuxcut]    http://jasonmun.blogspot.my/2017/04/ubuntu-tuxcut-linux.html
 # ---------------------------------------------------------------------------------
+gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+
 sudo apt install ubuntu-restricted-extras -y
 sudo apt install build-essential python3-software-properties -y
 
