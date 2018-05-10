@@ -17,6 +17,7 @@ gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 
 sudo apt install ubuntu-restricted-extras -y
 sudo apt install build-essential python3-software-properties -y
+sudo apt install libcanberra-gtk-module -y
 
 sudo apt install p7zip p7zip-full p7zip-rar rar
 
@@ -26,8 +27,8 @@ sudo apt install make git -y
 sudo apt install gtkorphan -y
 sudo apt install gufw -y
 sudo apt install meld -y
-sudo apt install menulibre -y
-sudo apt install remmina -y
+# sudo apt install menulibre -y
+# sudo apt install remmina -y
 sudo apt install seahorse -y
 sudo apt install wget -y
 sudo apt install gcc cpp -y
