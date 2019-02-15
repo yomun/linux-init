@@ -5,6 +5,12 @@
 # 
 # Copyright (C) 2017 Jason Mun
 # 
+##### nodejs && npm (source from Ubuntu base)
+# sudo apt-get install nodejs-dev node-gyp libssl1.0-dev -y
+# node -v
+# sudo apt-get install npm -y
+# npm -v
+#
 if [ `apt list | grep "^curl/" | grep -c "installed"` -eq 0 ]
 then
 	sudo apt install curl -y
