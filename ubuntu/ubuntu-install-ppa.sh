@@ -10,11 +10,13 @@
 # Extras PPA Software
 # [Sublime 3 + Plugins] http://jasonmun.blogspot.my/2017/03/sublime-text-3.html
 # ---------------------------------------------------------------------------------
+sudo add-apt-repository ppa:graphics-drivers/ppa -y                 # nvidia-415
+sudo add-apt-repository ppa:alessandro-strada/ppa -y                # google-drive-ocamlfuse
 sudo add-apt-repository ppa:gerardpuig/ppa -y                       # ubuntu-cleaner
-sudo add-apt-repository ppa:graphics-drivers/ppa -y                 # nvidia-384
 sudo add-apt-repository ppa:webupd8team/java -y                     # java
-sudo add-apt-repository ppa:plushuang-tw/uget-stable -y             # uget
-sudo add-apt-repository ppa:teejee2008/ppa -y                       # aptik, diskman, ukuu
+sudo add-apt-repository ppa:uget-team/ppa -y                        # uGet
+sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable -y  # qBittorent
+# sudo add-apt-repository ppa:teejee2008/ppa -y                     # aptik, diskman, ukuu
 # sudo add-apt-repository ppa:apandada1/brightness-controller -y    # brightness-controller
 # sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y  # grub-customizer
 # sudo add-apt-repository ppa:noobslab/apps -y                    　# xdman downloader
@@ -23,17 +25,18 @@ sudo add-apt-repository ppa:teejee2008/ppa -y                       # aptik, dis
 # sudo add-apt-repository ppa:ubuntuhandbook1/apps -y               # converseen
 # sudo add-apt-repository ppa:dhor/myway -y                         # easyimagesizer
 # sudo add-apt-repository ppa:ravefinity-project/ppa -y             # vivacious-colors
-# sudo add-apt-repository ppa:wireshark-dev/stable -y               # wireshark
-sudo add-apt-repository ppa:xuzhen666/gnome-mpv -y                  # gnome-mpv
+# sudo add-apt-repository ppa:xuzhen666/gnome-mpv -y                # gnome-mpv
+# sudo add-apt-repository ppa:rvm/smplayer -y                       # SMplayer
 # sudo add-apt-repository ppa:slytomcat/ppa -y                      # yd-tools
-# sudo add-apt-repository ppa:nilarimogard/webupd8 -y               # youtube-dlg / gnome-twitch
+sudo add-apt-repository ppa:wireshark-dev/stable -y                 # wireshark
+sudo add-apt-repository ppa:nilarimogard/webupd8 -y                 # youtube-dlg / gnome-twitch
 
 # wget -q -O - http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc | sudo apt-key add -
 # sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian artful contrib" >> /etc/apt/sources.list.d/virtualbox.org.list' 
 
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-sudo apt-add-repository "deb https://download.sublimetext.com/ apt/stable/"
-sudo apt install sublime-text
+# wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+# sudo apt-add-repository "deb https://download.sublimetext.com/ apt/stable/"
+# sudo apt install sublime-text
 
 # Precise/12.04
 # Trusty/14.04
@@ -54,9 +57,12 @@ sudo apt update
 sudo apt install ucaresystem-core -y
 
 sudo apt install ubuntu-cleaner -y                  # 14.04 / 16.04 - 18.04
-# sudo apt install nvidia-387 -y
+# sudo apt install nvidia-415 -y
 sudo apt install oracle-java8-installer -y
-sudo apt install uget aria2 -y                      # 12.04 - 18.04
+sudo apt install uget uget-integrator aria2 -y      # 12.04 - 18.04
+sudo apt install qbittorrent -y                     # 18.04
+
+sudo apt install google-drive-ocamlfuse -y          # 18.04
 
 # sudo apt install aptik -y                         # 12.04 / 14.04 - 17.10
 # sudo apt install brightness-controller -y         # 12.04 / 14.04 / 15.04 - 17.10
@@ -73,11 +79,11 @@ sudo apt install uget aria2 -y                      # 12.04 - 18.04
 # sudo apt install vivacious-colors -y
 # sudo apt install vivacious-folder-colors-addon -y
 
-sudo apt install wireshark -y                                            # 12.04 / 14.04 - 18.04
-
 # sudo apt install gnome-mpv -y; sudo apt remove totem totem-common -y   # 14.10 - 17.10
+# sudo apt install smplayer smplayer-themes smplayer-skins               # 18.04
 
-# sudo apt install youtube-dlg -y                                        # 12.04 / 14.04 / 15.04 - 18.04
+sudo apt install wireshark -y                                            # 12.04 / 14.04 - 18.04
+sudo apt install youtube-dlg -y                                          # 12.04 / 14.04 / 15.04 - 18.04
 # sudo apt install yd-tools -y
 
 # https://www.virtualbox.org/wiki/Linux_Downloads
