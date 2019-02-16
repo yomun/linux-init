@@ -81,6 +81,18 @@ wget https://repo.skype.com/latest/skypeforlinux-64.deb
 sudo dpkg -i skypeforlinux-64.deb
 
 # -------------------------------------------------------------------------------------------
+# OpenDrive
+# https://github.com/liberodark/ODrive/releases
+# -------------------------------------------------------------------------------------------
+LINK=`curl https://github.com/liberodark/ODrive/releases | grep '_amd64.deb' | head -n1 | sed "s/^.*href=\"//g" | sed "s/_amd64.deb.*/_amd64.deb/g"`
+wget https://github.com${LINK}
+FILE=`echo "${LINK}" | sed 's:.*/::'`
+if [ -f "${FILE}" ]
+then
+	sudo dpkg -i ${FILE}
+fi
+
+# -------------------------------------------------------------------------------------------
 # Stacer
 # https://github.com/oguzhaninan/Stacer/releases
 # -------------------------------------------------------------------------------------------
