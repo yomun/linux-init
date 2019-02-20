@@ -33,6 +33,7 @@ sudo apt install seahorse -y
 sudo apt install wget -y
 sudo apt install gcc cpp -y
 sudo apt install gnome-tweak-tool -y
+sudo apt install indicator-cpufreq -y
 
 # sudo apt install amule -y
 # sudo apt install bleachbit -y
