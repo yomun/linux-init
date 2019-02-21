@@ -82,6 +82,18 @@ wget https://repo.skype.com/latest/skypeforlinux-64.deb
 sudo dpkg -i skypeforlinux-64.deb
 
 # -------------------------------------------------------------------------------------------
+# Rambox
+# https://github.com/ramboxapp/community-edition/releases
+# -------------------------------------------------------------------------------------------
+LINK=`curl https://github.com/ramboxapp/community-edition/releases | grep '\-amd64.deb' | head -n1 | sed "s/^.*href=\"//g" | sed "s/\-amd64.deb.*/\-amd64.deb/g"`
+wget https://github.com${LINK}
+FILE=`echo "${LINK}" | sed 's:.*/::'`
+if [ -f "${FILE}" ]
+then
+	sudo dpkg -i ${FILE}
+fi
+
+# -------------------------------------------------------------------------------------------
 # OpenDrive
 # https://github.com/liberodark/ODrive/releases
 # -------------------------------------------------------------------------------------------
