@@ -29,7 +29,7 @@ sudo apt install gufw -y
 sudo apt install meld -y
 # sudo apt install menulibre -y
 # sudo apt install remmina -y
-sudo apt install seahorse -y
+sudo apt install seahorse seahorse-nautilus -y
 sudo apt install wget -y
 sudo apt install gcc cpp -y
 sudo apt install gnome-tweak-tool -y
