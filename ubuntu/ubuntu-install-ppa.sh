@@ -16,6 +16,7 @@ sudo add-apt-repository ppa:gerardpuig/ppa -y                       # ubuntu-cle
 sudo add-apt-repository ppa:webupd8team/java -y                     # java
 sudo add-apt-repository ppa:uget-team/ppa -y                        # uGet
 sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable -y  # qBittorent
+sudo add-apt-repository ppa:linrunner/tlp -y                        # tlp tlp-rdw
 # sudo add-apt-repository ppa:teejee2008/ppa -y                     # aptik, diskman, ukuu
 # sudo add-apt-repository ppa:apandada1/brightness-controller -y    # brightness-controller
 # sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y  # grub-customizer
@@ -92,3 +93,6 @@ sudo apt install youtube-dlg -y                                          # 12.04
 # wget ${FILE}
 # sudo apt install virtualbox-5.2 -y
 sudo apt install virtualbox -y
+
+sudo apt install tlp tlp-rdw -y
+sudo tlp start
