@@ -13,7 +13,7 @@
 sudo add-apt-repository ppa:graphics-drivers/ppa -y                 # nvidia-415
 sudo add-apt-repository ppa:alessandro-strada/ppa -y                # google-drive-ocamlfuse
 sudo add-apt-repository ppa:gerardpuig/ppa -y                       # ubuntu-cleaner
-sudo add-apt-repository ppa:webupd8team/java -y                     # java
+sudo add-apt-repository ppa:linuxuprising/java -y                   # java
 sudo add-apt-repository ppa:uget-team/ppa -y                        # uGet
 sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable -y  # qBittorent
 sudo add-apt-repository ppa:linrunner/tlp -y                        # tlp tlp-rdw
@@ -59,7 +59,8 @@ sudo apt install ucaresystem-core -y
 
 sudo apt install ubuntu-cleaner -y                  # 14.04 / 16.04 - 18.04
 # sudo apt install nvidia-415 -y
-sudo apt install oracle-java8-installer -y
+# sudo apt install oracle-java8-installer -y
+sudo apt install oracle-java14-set-default
 sudo apt install uget uget-integrator aria2 -y      # 12.04 - 18.04
 sudo apt install qbittorrent -y                     # 18.04
 
