@@ -23,6 +23,7 @@ sudo apt install libcanberra-gtk-module -y
 sudo apt install p7zip p7zip-full p7zip-rar rar
 
 sudo apt install chrome-gnome-shell -y
+sudo apt install firefox-gnome-shell -y
 sudo apt install flashplugin-installer -y
 sudo apt install gdebi -y
 sudo apt install make git -y
