@@ -40,6 +40,7 @@ sudo apt install preload -y
 
 # sudo apt install amule -y
 # sudo apt install bleachbit -y
+# sudo apt install flameshot -y
 # sudo apt install gimp -y
 # sudo apt install gnome-twitch -y
 # sudo apt install leafpad -y
