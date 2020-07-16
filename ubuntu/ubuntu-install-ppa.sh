@@ -75,7 +75,7 @@ sudo apt install google-drive-ocamlfuse -y          # 18.04
 # sudo apt install indicator-diskman -y             # 14.04 / 15.04 - 17.10
 # sudo apt install ukuu -y                          # 14.04 / 15.04 - 17.10
 
-# sudo apt install converseen -y                    # 12.04 / 14.04 / 16.04 - 16.10
+# sudo apt install converseen -y                    # 16.04 / 20.04
 # sudo apt install easyimagesizer -y                # 14.04 / 16.04
 
 # sudo apt install vivacious-colors -y
