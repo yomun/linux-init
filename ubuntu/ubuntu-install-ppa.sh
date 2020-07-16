@@ -39,11 +39,6 @@ sudo add-apt-repository ppa:nilarimogard/webupd8 -y                 # youtube-dl
 # sudo apt-add-repository "deb https://download.sublimetext.com/ apt/stable/"
 # sudo apt install sublime-text
 
-# Precise/12.04
-# Trusty/14.04
-# Utopic/14.10
-# Vivid/15.04
-# Wily/15.10
 # Xenial/16.04
 # Yakkety/16.10
 # Zesty/17.04
@@ -79,7 +74,7 @@ sudo apt install google-drive-ocamlfuse -y          # 18.04
 # sudo apt install indicator-diskman -y             # 14.04 / 15.04 - 17.10
 # sudo apt install ukuu -y                          # 14.04 / 15.04 - 17.10
 
-# sudo apt install converseen -y                    # 16.04 / 20.04             # 14.04 / 16.04
+# sudo apt install converseen -y                    # 16.04 / 20.04
 
 # sudo apt install vivacious-colors -y
 # sudo apt install vivacious-folder-colors-addon -y
