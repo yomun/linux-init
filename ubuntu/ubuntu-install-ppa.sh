@@ -49,6 +49,10 @@ sudo add-apt-repository ppa:nilarimogard/webupd8 -y                 # youtube-dl
 # Zesty/17.04
 # Artful/17.10
 # Bionic/18.04
+# Cosmic/18.10
+# Disco/19.04
+# Eoan/19.10
+# Focal/20.04
 
 # ucaresystem-core (12.04 / 14.04 / 15.04 - 18.04)
 sudo add-apt-repository ppa:utappia/stable -y
@@ -75,8 +79,7 @@ sudo apt install google-drive-ocamlfuse -y          # 18.04
 # sudo apt install indicator-diskman -y             # 14.04 / 15.04 - 17.10
 # sudo apt install ukuu -y                          # 14.04 / 15.04 - 17.10
 
-# sudo apt install converseen -y                    # 16.04 / 20.04
-# sudo apt install easyimagesizer -y                # 14.04 / 16.04
+# sudo apt install converseen -y                    # 16.04 / 20.04             # 14.04 / 16.04
 
 # sudo apt install vivacious-colors -y
 # sudo apt install vivacious-folder-colors-addon -y
