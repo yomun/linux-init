@@ -72,6 +72,8 @@ sudo apt install language-pack-gnome-zh-hans language-pack-gnome-zh-hans-base -y
 # sudo localectl set-locale LANG=zh_CN.UTF-8
 # sudo apt install chinese-calendar -y
 
+sudo snap install onlyoffice-desktopeditors
+
 # -------------------------------------------------------------------------------------------
 # Google Chrome
 # https://github.com/yomun/chrome-gpu
