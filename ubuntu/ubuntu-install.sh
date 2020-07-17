@@ -16,6 +16,8 @@
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 gsettings set org.gnome.desktop.interface cursor-size 32
 
+touch ~/Templates/"Untitled Document"
+
 sudo apt install ubuntu-restricted-extras -y
 sudo apt install build-essential python3-software-properties -y
 sudo apt install libcanberra-gtk-module -y
