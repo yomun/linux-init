@@ -53,13 +53,15 @@ cp -r build/winboot /host
 # --------------------- Ubuntu 17.10 (进入系统修改设置) ---------------------
 
 # 1) 进入 Grub 2, 选 ubuntu, 按 e, 进入编辑模式
-# 将 2 处路径 /ubuntu/disks/root.disk 改为 /ubuntu_1710/disks/root.disk
+# >> 将 2 处路径 /ubuntu/disks/root.disk 改为 /ubuntu_1710/disks/root.disk
+# >> 将 ro quiet splash $vt_handoff 改为 rw single init=/bin/bash
 # 然后按 ctrl+x 运行
 
 # 2) 进入 ubuntu 后, 将 /etc/fstab 修改下 root.disk 与 swap.disk 的路径
-# $ sudo gedit /etc/fstab
+# sudo vi /etc/fstab
 # /ubuntu/ 改为 /ubuntu_1710/
 
 # 3) 更新 Grub 2
-# $ sudo update-grub
+# sudo update-grub
+# exec /sbin/init
 
