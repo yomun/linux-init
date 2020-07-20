@@ -7,6 +7,7 @@
 # Copyright (C) 2017 Jason Mun
 # 
 # ---------------------------------------------------------------------------------
+sudo snap install onlyoffice-desktopeditors
 
 sudo snap install sublime-text --classic
 
