@@ -87,7 +87,8 @@ sudo apt install youtube-dlg -y                                          # 12.04
 # sudo apt install yd-tools -y
 
 # https://www.virtualbox.org/wiki/Linux_Downloads
-# http://download.virtualbox.org/virtualbox/5.2.4/Oracle_VM_VirtualBox_Extension_Pack-5.2.4-119785.vbox-extpack
+# https://download.virtualbox.org/virtualbox/6.1.12/virtualbox-6.1_6.1.12-139181~Ubuntu~eoan_amd64.deb
+# https://download.virtualbox.org/virtualbox/6.1.12/Oracle_VM_VirtualBox_Extension_Pack-6.1.12.vbox-extpack
 # FILE=`curl https://www.virtualbox.org/wiki/Downloads | grep .vbox-extpack | grep -Eo "(href=\")[a-zA-Z0-9.:/?&=_-]*" | sed "s/href=\"//g" | head -n1`
 # wget ${FILE}
 # sudo apt install virtualbox-5.2 -y
