@@ -64,16 +64,11 @@ fi
 cd ..
 
 # -------------------------------------------------------------------------------------------
-# wine-QQ
-# 要先安装 wine + winetricks
-# [CrossOver + QQ]      http://jasonmun.blogspot.my/2017/02/crossover-qq.html
+# QQ
+# https://im.qq.com/linuxqq/download.html
 # -------------------------------------------------------------------------------------------
-# wget https://github.com/askme765cs/Wine-QQ/raw/master/AutoInstallWineForUbuntuX64.sh
-# sudo sh AutoInstallWineForUbuntuX64.sh
-#
-# git clone https://github.com/askme765cs/Wine-QQ.git -b latest --single-branch
-# cd Wine-QQ/Wine-QQ8.9.3
-# ./qq.sh
+wget http://down.qq.com/qqweb/LinuxQQ_1/linuxqq_2.0.0-b2-1082_amd64.deb
+sudo gdebi linuxqq_2.0.0-b2-1082_amd64.deb
 
 # -------------------------------------------------------------------------------------------
 # Electronic Wechat 微信
