@@ -15,10 +15,11 @@
 sudo apt install fcitx -y;
 sudo apt remove ibus -y
 # sogoupinyin_2.2.0.0102_amd64.deb
-wget -O sogoupinyin_amd64.deb https://pinyin.sogou.com/linux/download.php?f=linux&bit=64
-if [ -f "sogoupinyin_amd64.deb" ]
+# wget -O sogoupinyin_amd64.deb https://pinyin.sogou.com/linux/download.php?f=linux&bit=64
+wget http://cdn2.ime.sogou.com/dl/index/1598240917/sogoupinyin_2.3.2.07_amd64.deb?st=Qq50JDorEDibF5Zh6Sg2gA&e=1598724986&fn=sogoupinyin_2.3.2.07_amd64.deb
+if [ -f "sogoupinyin_2.3.2.07_amd64.deb" ]
 then
-	sudo dpkg -i sogoupinyin_amd64.deb
+	sudo dpkg -i sogoupinyin_2.3.2.07_amd64.deb
 	sudo apt install -f -y
 fi
 
@@ -52,26 +53,14 @@ wget https://github.com/yomun/youdaodict_5.5/raw/master/youdao-dict_1.1.1-0~ubun
 sudo dpkg -i youdao-dict_1.1.1-0*ubuntu_amd64.deb
 
 # -------------------------------------------------------------------------------------------
-# BCloud 百度云网盘
-# https://github.com/Yufeikang/bcloud
+# 百度云网盘
 # -------------------------------------------------------------------------------------------
-# sudo apt-get --fix-broken install
-sudo apt install python3-dev -y
-sudo apt install python3-setuptools -y
-# sudo easy_install3 pip -y
-sudo apt install python3-pip -y
+wget http://wppkg.baidupcs.com/issue/netdisk/Linuxguanjia/3.3.2/baidunetdisk_3.3.2_amd64.deb
+if [ -f "baidunetdisk_3.3.2_amd64.deb" ]
+then
+	sudo gdebi baidunetdisk_3.3.2_amd64.deb
+fi
 
-sudo pip3 install --upgrade pycrypto
-sudo pip3 install --upgrade keyring
-sudo pip3 install cssselect
-sudo pip3 install pyinotify
-
-git clone https://github.com/Yufeikang/bcloud
-cd bcloud && sudo python3 setup.py install
-
-# uninstall
-# sudo python3 setup.py install --record install.txt
-# cat install.txt | xargs sudo rm -rf
 cd ..
 
 # -------------------------------------------------------------------------------------------
